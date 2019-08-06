@@ -41,93 +41,14 @@ musicButton.addEventListener('click', function(event) {
   }, 400);
 });
 
-
-
 window.onload=function() {
-  
-    if (document.getElementById('iframe_api') === null) {
-    var tag = document.createElement('script');
-    tag.src = "https://www.youtube.com/iframe_api";
-    tag.id = 'iframe_api';
-    var firstScriptTag = document.getElementsByTagName('script')[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-  } 
-  
-  let videos = document.querySelectorAll('.video-player_wrap');
-  if (videos.length) {
-    window.onYouTubeIframeAPIReady = onYouTubeIframeAPIReady;
-    
-    function onYouTubeIframeAPIReady() {
-     
-      
-        videos.forEach(vid => {
-          var theUrl = vid.getAttribute('data-video-url');
-          let playerId = vid.getAttribute('data-player-id');
-    
-    
-    
-          function getId(url) {
-            var regExp = /.*(?:youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=)([^#\&\?]*).*/
-            var match = url.match(regExp);
-            return (match && match[1].length == 11) ? match[1] : false;
-          }
-          console.log(playerId);
-    
-    
-          var player;
-    
-    
-    
-          player = new YT.Player(playerId, {
-            width: '1080',
-            height: '720',
-            videoId: getId(theUrl),
-            playerVars: { 'autoplay': 1, 'playsinline': 1, 'controls': 0, 'showinfo': 0, 'rel': 0, 'enablejsapi': 1, 'wmode': 'transparent' },
-            events: {
-              'onReady': pkOnPlayerReady,
-              'onStateChange': pkOnPlayerStateChange
-            }
-          });
-    
-    
-          
-    
-    
-          function pkOnPlayerStateChange(e) {
-            e.target.mute();
-            player.mute();
-            if (e.data === YT.PlayerState.ENDED) {
-              
-              player.playVideo();
-              player.mute();
-              e.target.mute();
-            }
-            if (e.data === YT.PlayerState.BUFFERING) {
-              e.target.setPlaybackQuality('hd720');
-              e.target.mute();
-              player.mute();
-            }
-          }
-    
-          function pkOnPlayerReady(event) {
-            event.target.setPlaybackQuality('hd720');
-            event.target.mute();
-            player.mute();
-            setTimeout(function () {
-                player.mute();
-                console.log(player.isMuted())
-                vid.classList.add('loaded');
-                event.target.mute();
-            }, 800);
-          }
-        })
 
-      var tobi = new Tobi({
-        autoplayVideo: true,
-        isYouTubeDependencieLoaded: true
-      }); 
-      }
-    }
+
+  var tobi = new Tobi({
+    autoplayVideo: true
+  }); 
+  
+
     
 }
 
