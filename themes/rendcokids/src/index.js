@@ -100,12 +100,12 @@ window.onload=function() {
               
               player.playVideo();
               player.mute();
-              e.target.playVideo();
               e.target.mute();
             }
             if (e.data === YT.PlayerState.BUFFERING) {
               e.target.setPlaybackQuality('hd720');
               e.target.mute();
+              player.mute();
             }
           }
     
@@ -113,15 +113,15 @@ window.onload=function() {
             event.target.setPlaybackQuality('hd720');
             event.target.mute();
             player.mute();
-            console.log(player.isMuted())
             setTimeout(function () {
+                player.mute();
+                console.log(player.isMuted())
                 vid.classList.add('loaded');
                 event.target.mute();
-                player.mute();
             }, 800);
           }
         })
-      console.log(window.YT)
+
       var tobi = new Tobi({
         autoplayVideo: true,
         isYouTubeDependencieLoaded: true
