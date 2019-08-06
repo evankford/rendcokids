@@ -12,6 +12,9 @@
     @media (max-width: 950px) {
       padding: 150px 0 90px;
     }
+    @media (max-width: 650px) {
+      padding: 150px 0 120px;
+    }
   }
   .album-img-wrap {
     position: relative;
@@ -60,6 +63,9 @@
   }
   @media (max-width: 800px) {
     flex: 0 1 280px;
+  }
+  @media (max-width: 800px) {
+    flex: 0 1 190px;
   }
   height: auto;
   img {

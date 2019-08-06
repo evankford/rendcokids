@@ -11,6 +11,11 @@ AOS.init({
 
 import Tobi from 'rqrauhvmra__tobi';
 
+import smoothscroll from 'smoothscroll-polyfill';
+
+// kick off the polyfill!
+smoothscroll.polyfill();
+
 import './sass/style.scss';
 import 'rqrauhvmra__tobi/css/tobi.min.css';
 import 'aos/dist/aos.css';
@@ -46,14 +51,18 @@ window.onload=function() {
     tag.id = 'iframe_api';
     var firstScriptTag = document.getElementsByTagName('script')[0];
     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-    } 
+  } 
+  
+  let videos = document.querySelectorAll('.video-player_wrap');
+  if (videos.length) {
+    window.onYouTubeIframeAPIReady = onYouTubeIframeAPIReady;
     
-    let videos = document.querySelectorAll('.video-player_wrap');
-      if (videos.length) {
-      window.onYouTubeIframeAPIReady = onYouTubeIframeAPIReady;
-    
-      function onYouTubeIframeAPIReady() {
-    
+    function onYouTubeIframeAPIReady() {
+      console.log(window.YT)
+        var tobi = new Tobi({
+          autoplayVideo: true,
+          isYouTubeDependencieLoaded: true
+        }); 
       
         videos.forEach(vid => {
           var theUrl = vid.getAttribute('data-video-url');
@@ -118,11 +127,8 @@ window.onload=function() {
             }, 800);
           }
         })
-        var tobi = new Tobi({
-          autoplayVideo: true,
-          isYouTubeDependencieLoaded: true
-        });
       }
     }
+    
 }
 

@@ -64,6 +64,7 @@
     "aos": "^3.0.0-beta.6",
     "css.escape": "^1.5.1",
     "lazysizes": "^5.1.0",
-    "rqrauhvmra__tobi": "^1.8.1"
+    "rqrauhvmra__tobi": "^1.8.1",
+    "smoothscroll-polyfill": "^0.4.4"
   }
 }

@@ -696,6 +696,9 @@ a.underline {
     @media (max-width: 950px) {
       .music-section .section-inner {
         padding: 150px 0 90px; } }
+    @media (max-width: 650px) {
+      .music-section .section-inner {
+        padding: 150px 0 120px; } }
   .music-section .album-img-wrap {
     position: relative;
     z-index: 1; }
@@ -737,6 +740,9 @@ a.underline {
     @media (max-width: 800px) {
       .music-decorations .decoration--boy {
         flex: 0 1 280px; } }
+    @media (max-width: 800px) {
+      .music-decorations .decoration--boy {
+        flex: 0 1 190px; } }
     .music-decorations .decoration--boy img {
       margin-bottom: -5px; }
   .music-decorations .decoration--penguin {

@@ -15,7 +15,7 @@
     <div class="video-widget">
       <?php preg_match("#(?<=v=)[a-zA-Z0-9-]+(?=&)|(?<=v\/)[^&\n]+(?=\?)|(?<=v=)[^&\n]+|(?<=youtu.be/)[^&\n]+#", get_field('featured_video'), $matches);
       $featvidid = $matches[0];?>
-      <a href="<?php echo get_field('featured_video');?>" data-type="youtube" class="featured-video lightbox" data-id="<?php echo $featvidid;?>" >
+      <a target="_blank" rel="nofollow" href="<?php echo get_field('featured_video');?>" data-type="youtube" class="featured-video lightbox" data-id="<?php echo $featvidid;?>" >
         <div class="featured-video-bg">
           <?php $featimg = get_field('featured_video_image');
           imgwrap($featimg['id'], true, '1200w');?>
@@ -35,7 +35,7 @@
         <?php foreach (get_field('more_videos') as $video) {
           preg_match("#(?<=v=)[a-zA-Z0-9-]+(?=&)|(?<=v\/)[^&\n]+(?=\?)|(?<=v=)[^&\n]+|(?<=youtu.be/)[^&\n]+#", $video['url'], $matches);
           $vidid = $matches[0];?>
-          <a href="<?php echo $video['url'];?>" data-type="youtube" class="video-item lightbox" data-id="<?php echo $vidid;?>" >
+          <a target="_blank" rel="nofollow"  href="<?php echo $video['url'];?>" data-type="youtube" class="video-item lightbox" data-id="<?php echo $vidid;?>" >
             <div class="video-bg">
                <?php $vidimg = imgwrap($video['thumbnail']['id'], true, '600w');?>
             </div>
