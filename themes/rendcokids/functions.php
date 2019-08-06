@@ -115,13 +115,14 @@ add_action( 'widgets_init', 'rendcokids_widgets_init' );
  * Enqueue scripts and styles.
  */
 function rendcokids_scripts() {
-	wp_enqueue_style( 'rendcokids-style', get_stylesheet_uri() );
+	$buster = '-launch';
+	wp_enqueue_style( 'rendcokids-style', get_stylesheet_directory_uri() . $buster . '.css' );
 
 	wp_enqueue_style( 'typekit', 'https://use.typekit.net/unx2oyd.css');
 
 	wp_enqueue_style('fontAwesome', 'https://use.fontawesome.com/releases/v5.0.13/css/all.css');
 
-	wp_enqueue_script( 'rendcokids-theme', get_template_directory_uri() . '/public/frontend-bundle.js', array(), false, true);
+	wp_enqueue_script( 'rendcokids-theme', get_template_directory_uri() . '/public/frontend-bundle' . $buster . '.js', array(), false, true);
 	if (is_admin()) {
 		wp_enqueue_script( 'rendcokids-customizer', get_template_directory_uri() . '/public/customizer-bundle.js', array(), false, true );
 	}

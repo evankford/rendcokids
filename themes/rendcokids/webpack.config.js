@@ -5,6 +5,7 @@ const path = require('path'),
   BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 const devMode = process.env.NODE_ENV !== 'production'
+const buster = process.env.npm_package_config_buster || '';
   
   
 module.exports = {
