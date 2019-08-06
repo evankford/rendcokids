@@ -116,7 +116,7 @@ add_action( 'widgets_init', 'rendcokids_widgets_init' );
  */
 function rendcokids_scripts() {
 	$buster = '-launch';
-	wp_enqueue_style( 'rendcokids-style', get_stylesheet_directory_uri() . $buster . '.css' );
+	wp_enqueue_style( 'rendcokids-style', get_stylesheet_directory_uri() . '/style' . $buster . '.css', false );
 
 	wp_enqueue_style( 'typekit', 'https://use.typekit.net/unx2oyd.css');
 
