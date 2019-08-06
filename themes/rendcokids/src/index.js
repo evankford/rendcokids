@@ -58,11 +58,7 @@ window.onload=function() {
     window.onYouTubeIframeAPIReady = onYouTubeIframeAPIReady;
     
     function onYouTubeIframeAPIReady() {
-      console.log(window.YT)
-        var tobi = new Tobi({
-          autoplayVideo: true,
-          isYouTubeDependencieLoaded: true
-        }); 
+     
       
         videos.forEach(vid => {
           var theUrl = vid.getAttribute('data-video-url');
@@ -119,14 +115,17 @@ window.onload=function() {
             player.mute();
             console.log(player.isMuted())
             setTimeout(function () {
-              if (YT.PlayerState.PLAYING) {
                 vid.classList.add('loaded');
                 event.target.mute();
                 player.mute();
-              }
             }, 800);
           }
         })
+      console.log(window.YT)
+      var tobi = new Tobi({
+        autoplayVideo: true,
+        isYouTubeDependencieLoaded: true
+      }); 
       }
     }
     
