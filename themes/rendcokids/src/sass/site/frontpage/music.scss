@@ -1,0 +1,134 @@
+.music-section {
+  background: $color__purple;
+  color: $color__white;
+  position: relative;
+  overflow: hidden;
+  .section-inner {
+    max-width: 550px;
+    text-align: center;
+    width: 85%;
+    margin: auto;
+    padding: 50px 0;
+    @media (max-width: 950px) {
+      padding: 150px 0 90px;
+    }
+  }
+  .album-img-wrap {
+    position: relative;
+    z-index: 1;
+    img {
+      box-shadow: $box-shadow;
+    }
+    
+  }
+  .respimg-wrap {
+    max-width: 600px;
+    margin: 12px auto;
+  }
+  h2 {
+    max-width: 550px;
+    text-align: center;
+  }
+  .button-wrap {
+    display: block;
+    margin-top: -40px;
+    z-index: 2;
+    position: relative;
+  }
+}
+.music-decorations {
+  position: absolute;
+  overflow: hidden;
+  left: 50%;
+  width: 100%;
+  max-width: 1100px;
+  transform: translateX(-58%);  
+  bottom: 0;
+  height: 450px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  
+  @media (max-width: 800px) {
+    width: 123%;
+  }
+  
+ .decoration--boy {
+  flex: 0 1 400px;
+  @media (max-width: 1100px) {
+    flex: 0 1 340px;
+  }
+  @media (max-width: 800px) {
+    flex: 0 1 280px;
+  }
+  height: auto;
+  img {
+    margin-bottom: -5px;
+  }
+ }
+ .decoration--penguin {
+  flex: 0 1 200px;
+  height: auto;
+   @media (max-width: 1100px) {
+    flex: 0 1 180px;
+  }
+   @media (max-width: 800px) {
+    flex: 0 1 140px;
+  }
+  img {
+    margin-bottom: -20%;
+  }
+ }
+} 
+
+.music-button {
+  display: inline-block;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  background: $color__black;
+  color: $color__white;
+  font-weight: bold;
+  
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  &.active {
+    .button-links {
+      max-height: 200px;
+    } 
+  }
+  @media (min-width: 700px) {
+    font-size: 25px;
+  }
+  span, a  {
+   padding: 14px 28px;
+   display: block;
+  }
+  a.button-link__inner {
+    width: 100%;
+    color: $color__white;
+    text-decoration: none;
+    box-shadow: 0 -10px 10px rgba(0,0,0,0.1);
+    i {
+      font-weight: normal;
+    }
+    
+    &:first-of-type {
+      background-color: $color__pink; 
+    }
+    &:nth-of-type(2) {
+      background-color: $color__lime; 
+    }
+    &:nth-of-type(3) {
+      background-color: $color__orange; 
+      // padding-bottom: 30px;
+    }
+  }
+  .button-links {
+    overflow: hidden;
+    max-height: 0px;
+    transition: max-height 500ms $ease-quart;
+  }
+}
+

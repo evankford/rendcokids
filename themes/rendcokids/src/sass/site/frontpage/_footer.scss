@@ -1,0 +1,107 @@
+.site-footer {
+  background: $color__black;
+  --webkit-font-smoothing: antialiased;
+  color: $color__white;
+  a, a i {
+    color: $color__white;
+    &:visited {
+      color: darken($color__white, 10%)
+    }
+  }
+  position: relative;
+  z-index: 100;
+}
+
+.footer-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  // padding: 0 22px;
+  width: 95%;
+  max-width: 1250px;
+  margin: 0 auto 30px;
+  align-items: center;
+  justify-content: space-between;
+  h4 {
+    font-weight: 400;
+  }
+  .footer-left, .footer-right {
+    max-width: 450px;
+    flex: 1 1 240px;
+    padding: 0 25px;
+    margin: 0 0 20px;
+    @media (max-width: 800px) {
+    
+    text-align: center;
+  }
+  }
+  img.whale {
+    margin-top: -50px;
+    width: 80%;
+    display: block;
+    
+  }
+}
+
+#mc_embed_signup {
+  text-align: left;
+  padding: 0;
+  
+}
+#mc_embed_signup_scroll {
+  display: flex;
+  flex-wrap: wrap;
+  width:   100%;
+  .input-group {
+    flex: 1 1 auto;
+    input {
+      width: 100%;
+      height: 45px;
+    }
+    input.email {
+      padding: 10px 12px;  
+      height: 45px;
+      border-radius: 0px;
+      border: 0px;
+      border-bottom: 4px solid $color__purple;  
+      background: transparent;
+      color: white;
+
+    }
+    input::placeholder {
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: bold;
+    }
+    input[type=submit] {
+      border: 0px;
+      border-radius: 0px;
+      background:$color__purple;
+      font-size: 16px;
+    }
+    max-width: 250px;
+    min-width: 120px;   
+    & + .input-group {
+      max-width: 120px;
+      input {
+        appearance: none;
+        line-height: 1;
+      }
+    }
+  }
+}
+
+.footer-right {
+  text-align: left;
+  
+  a {
+   text-decoration: none;
+   font-weight: 700; 
+  }
+  a.social-icon {
+    padding: 2px;
+    margin: 4px;
+    font-size: 22px;
+    font-weight: 400;
+  }
+}

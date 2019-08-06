@@ -1,0 +1,16 @@
+@import 'music';
+@import 'videos';
+@import 'clouds';
+@import 'header';
+@import 'footer';
+
+section {
+  position: relative;
+}
+
+.section-inner {
+  max-width: 1250px;
+  width: 95%;
+  padding: 12px;
+  margin: auto;
+}
