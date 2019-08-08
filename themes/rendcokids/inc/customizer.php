@@ -145,7 +145,8 @@ function rendcokids_customize_register( $wp_customize ) {
   $wp_customize->add_setting('rendcokids_show_ekf');
   $wp_customize->add_setting('rendcokids_footer_menu');
   $wp_customize->add_setting('rendcokids_footer_socials');
-
+  $wp_customize->add_setting('footer_link_text');
+  $wp_customize->add_setting('footer_link_url');
   
   
   $wp_customize->add_control(
@@ -157,18 +158,8 @@ function rendcokids_customize_register( $wp_customize ) {
     )
   );
   
-  $wp_customize->add_control(
-    'rendcokids_footer_ekf_ctrl',
-    array(
-        'label'      => __( 'Show EKF Link?', 'rendcokids' ),
-        'section'    => 'rendcokids_footer',
-        'settings'   => 'rendcokids_show_ekf',
-        'type'      => 'checkbox'
-    )
-  );
   
-  $wp_customize->add_setting('footer_link_text');
-  $wp_customize->add_setting('footer_link_url');
+  
 
   $wp_customize->add_control(
     'footer_link_text_control',
@@ -186,6 +177,15 @@ function rendcokids_customize_register( $wp_customize ) {
         'section'    => 'rendcokids_footer',
         'settings'   => 'footer_link_url',
         'type'       => 'url'
+    )
+  );
+  $wp_customize->add_control(
+    'rendcokids_footer_ekf_ctrl',
+    array(
+        'label'      => __( 'Show EKF Link?', 'rendcokids' ),
+        'section'    => 'rendcokids_footer',
+        'settings'   => 'rendcokids_show_ekf',
+        'type'      => 'checkbox'
     )
   );
   
