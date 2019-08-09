@@ -22,14 +22,14 @@ h1,
 h2,
 .h2 {
 	font-size: 38px;
-	font-size: calc(25px + 2vw);
+	font-size: calc(32px + 1.9vw);
 	line-height: 1.1;
 }
 
 h3,
 .h3 {
 	font-size: 32px;
-	font-size: calc(18px + 1.8vw);
+	font-size: calc(22px + 1.8vw);
 	line-height: 1.1;
 		@media (min-width: 1100px) {
 		font-size: 32px;
@@ -40,7 +40,7 @@ h3,
 h4,
 .h4 {
 	font-size: 22px;
-	font-size: calc(13px + 1.2vw);
+	font-size: calc(15px + 1.2vw);
 	line-height: 1.1;
 	@media (min-width: 1100px) {
 		font-size: 22px;

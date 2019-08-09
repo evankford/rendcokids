@@ -4,7 +4,7 @@
   position: relative;
   overflow: hidden;
   .section-inner {
-    max-width: 550px;
+    max-width: 580px;
     text-align: center;
     width: 85%;
     margin: auto;
@@ -29,8 +29,15 @@
     margin: 12px auto;
   }
   h2 {
-    max-width: 550px;
+    max-width: 590px;
     text-align: center;
+  }
+  h4 {
+    max-width: 550px;
+    margin: 0 auto 1em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 400;
   }
   .button-wrap {
     display: block;
@@ -54,6 +61,10 @@
   
   @media (max-width: 800px) {
     width: 123%;
+  }
+  @media (max-width: 600px) {
+    width: 100%;
+    transform: translateX(-50%);  
   }
   
  .decoration--boy {
@@ -80,6 +91,9 @@
   }
    @media (max-width: 800px) {
     flex: 0 1 140px;
+  }
+   @media (max-width: 600px) {
+    flex: 0 1 100px;
   }
   img {
     margin-bottom: -20%;

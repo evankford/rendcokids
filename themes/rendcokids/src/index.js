@@ -36,8 +36,17 @@ musicButton.addEventListener('click', function(event) {
     window.scrollTo({
       'behavior': 'smooth',
       'left': 0,
-      'top': offset(musicButton).top
+      'top': offset(musicButton).top - 100  
     });
+    function clickOff(event) { 
+      // console.log(event.target.parentNode);
+      if (event.target.parentNode != musicButton) {
+        musicButton.classList.remove('active')
+      }
+    }
+    window.addEventListener('click', clickOff(event));
+  
+    
   }, 400);
 });
 
