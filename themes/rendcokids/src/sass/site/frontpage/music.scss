@@ -14,7 +14,7 @@
     }
     @media (max-width: 650px) {
       padding: 150px 0 120px;
-    }
+    } 
   }
   .album-img-wrap {
     position: relative;
@@ -22,7 +22,6 @@
     img {
       box-shadow: $box-shadow;
     }
-    
   }
   .respimg-wrap {
     max-width: 600px;
@@ -61,6 +60,7 @@
   
   @media (max-width: 800px) {
     width: 123%;
+    display: flex;
   }
   @media (max-width: 600px) {
     width: 100%;

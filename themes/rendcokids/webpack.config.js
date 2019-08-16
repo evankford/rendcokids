@@ -5,8 +5,6 @@ const path = require('path'),
   BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 const devMode = process.env.NODE_ENV !== 'production'
-const buster = process.env.npm_package_config_buster || '';
-  
   
 module.exports = {
   context: __dirname,
@@ -17,7 +15,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'public'),
     filename: '[name]-bundle.js'
-  },
+  },  
   mode: 'development',
   devtool: 'source-map',
   module: {
@@ -48,6 +46,17 @@ module.exports = {
               implementation: require("node-sass")
             }
           }
+        ]
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+            options : {
+              publicPath: './public/images'
+            }
+          },
         ]
       }
     ]
