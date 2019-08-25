@@ -14,4 +14,16 @@
         </div>
       </div>
     </div>
+    
+    <div class="blog-insta">
+    
+      <h2>On Instagram</h2>
+      <div class="insta-wrap">
+      <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+<div class="elfsight-app-11803a70-0bb9-4d0f-87c0-153ace9805af"></div></div>
+<div class="button-wrap">
+  
+  <a href="https://instagram.com/rendcokids" class="button"><i class="fab fa-instagram"></i> Follow</a>
+</div>
+    </div>
   </section>

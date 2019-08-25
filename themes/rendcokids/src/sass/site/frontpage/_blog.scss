@@ -1,6 +1,6 @@
 section.blog-section {
-  background: $color__offwhite;
-  background-image: url('../../images/blog-bg.png');
+  background: $color__green;
+  background-image: url('../../images/blog-bg-3.png');
   padding: 40px 12px;
   background-position: 50% 100% ; 
   .section-inner {
@@ -79,5 +79,13 @@ section.blog-section {
     p {
       margin: 12px auto;
     }
+  }
+}
+
+.blog-insta {
+  color: $color__black;
+  text-align: center;
+  .insta-wrap {
+    margin: 24px auto;
   }
 }
