@@ -3,6 +3,8 @@ section.blog-section {
   background-image: url('../../images/blog-bg-3.png');
   padding: 40px 12px;
   background-position: 50% 100% ; 
+  position: relative;
+  z-index: 1;
   .section-inner {
     max-width: 1300px;
     margin: 22px auto;
@@ -15,6 +17,7 @@ section.blog-section {
     top: 0;
     left: 0;
     width: 100%;
+    z-index: 0;
     height: 100%;
     background-color: rgba(rgb(231, 231, 231), 0.2)
     
