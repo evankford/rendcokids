@@ -12,7 +12,7 @@
         </div>
         <div class="section-inner">
           <h2 data-aos="fade-up"><?php the_field('album_header');?></h2>
-          <h4 data-aos="fade-up" data-aos-delay="100"><?php the_field('album_header_after');?></h4>
+
           <div data-aos="fade-up" data-aos-delay="200"  class="album-img-wrap">
             
           <?php $album_img = get_field('album_cover')['id'];

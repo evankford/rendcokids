@@ -1,0 +1,93 @@
+.store-section {
+ background: #3f955e    ;
+ color: $color__white;
+ background-image: url('../../images/sheep.jpg');
+ background-size: 500px auto;
+ background-position: 100% 100%;
+ background-repeat: no-repeat;
+  
+}
+
+.store-inner.section-inner {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  max-width: 1400px;
+}
+
+.store-header {
+  flex: 1 1 240px;
+  padding-left: 22px;
+  margin: 30px auto;
+  max-width: 400px;
+}
+
+.store-grid {
+  display: flex;
+  
+  flex: 1 1 400px;
+  max-width: 1000px;
+  margin: 40px auto;
+  .store-grid-item {
+    text-decoration: none;
+    flex: 1 1 150px;
+    // max-width: 300px;
+    background: $color__white;
+    color: $color__black;
+    display: flex;
+    flex-direction: column;
+    &.store-extra {
+      background: none;
+      color: $color__white;
+      padding: 35px;
+      background: rgba(#3f955e, 0.5);
+      @media (max-width: 500px) {
+        padding: 22px;
+      }
+      align-items: center;
+      justify-content: center;
+      .button {
+          display: inline-block;
+          width: auto;
+      }
+    }
+  }
+      @supports (display : grid) {
+        display: grid;
+        grid-gap: 12px;
+        box-sizing: border-box;
+        // max-width: 100%;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+       
+        @media (max-width: 960px) {
+          grid-template-columns: repeat(2, minmax(0, 1fr))
+        }
+        @media (max-width: 500px) {
+          display: flex;
+          flex-wrap: wrap;
+          .store-grid-item  {
+            border: 4px solid #3f955e;
+          }
+        }
+        @media (max-width: 320px) {
+         
+        }
+      }
+}
+
+.store-bottom {
+  display: flex;
+  padding: 6px 18px 12px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .button.small {
+    font-size: 16px;
+    padding: 8px 12px;
+    flex: 0 0 auto;
+  }
+  .store-info {
+    flex: 1 1 120px;
+    padding: 0 22px 0 0;
+  }
+}

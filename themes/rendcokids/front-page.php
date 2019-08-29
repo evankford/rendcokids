@@ -14,6 +14,8 @@ get_header();
 		<main id="main" class="site-main">
       <?php get_template_part('template-parts/front', 'music');?>
       <?php get_template_part('template-parts/front', 'video');?>
+      <?php get_template_part('template-parts/front', 'store');?>
+      <?php get_template_part('template-parts/front', 'chords');?>
       <?php get_template_part('template-parts/front', 'blog');?>
 		
 

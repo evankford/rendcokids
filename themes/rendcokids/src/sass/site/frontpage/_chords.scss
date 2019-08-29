@@ -1,0 +1,44 @@
+.chord-section {
+  a {
+    text-decoration: none;
+    width: 100%;
+    background: $color__blue;
+    display: block;
+    
+  }
+  .respimg-wrap {
+    width: auto;
+    margin: 0vw auto;
+    height: 90vh;
+    display: flex;
+    align-items: center;justify-content: center;
+    padding: 0 !important;
+    img {
+      height: 100%;
+      width: auto;
+      margin: auto;
+      display: block;
+      position: relative;
+    }
+  }
+  @media (min-width: 1000px) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    
+    a {
+      height: 90vh;
+      width: 360px;
+      .respimg-wrap {
+        width: 360px;
+        img {
+          width: 100%;
+          height: auto;
+          
+        }
+      }
+      
+    }
+  }  
+}

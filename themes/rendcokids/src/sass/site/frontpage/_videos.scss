@@ -3,6 +3,7 @@ section.video-section {
   color: $color__white;
   position: relative;
   overflow: hidden;
+  z-index: 3;
   display: block;
   width: 100%;
   .clouds {

@@ -61,3 +61,62 @@ window.onload=function() {
     
 }
 
+
+``
+///store
+
+let storeUrl = 'https://rendcollective.com/collections/rend-co-kids/products.json';
+let storeTarg = document.getElementById('store-target');
+
+function loadJSon(url) {
+  var request = new XMLHttpRequest();
+  request.open('GET', url, true);
+
+  request.onload = function () {
+
+    if (this.status >= 200 && this.status < 400) {
+      // Success!
+      var data = JSON.parse(this.response);
+
+      return onDataLoad(data);
+    } else {
+      // We reached our target server, but it returned an error
+
+    }
+  };
+  request.send();
+
+}
+
+function onDataLoad(data) {
+  let products = data.products;
+  let i = 0;
+  products.forEach(product => {
+    i++
+    let el = document.createElement('a');
+    el.classList.add('store-grid-item');
+     el.setAttribute('href', 'https://rendcollective.com/products/' + product.handle) 
+     el.innerHTML = `<div class="store-item">
+        <div class="store-image">
+          <img class="lazyload" src="` + product.images[0].src  + `">
+        </div>
+        <div class="store-bottom">
+          <div class="store-info"><h4>`+ product.title + `</h4><span class="price">` + product.variants[0].price + `</span></div>
+          <div class="button small">Shop</div>
+        </div>
+      </div>`;
+      if (i <= 8) {
+        storeTarg.append(el);
+     }
+  })
+  
+  let andEl = document.createElement('div');
+  andEl.classList.add('store-extra', 'store-grid-item');
+  // andEl.classList.add('store-grid-item');
+  andEl.innerHTML = '<h3>Plus more great kids gifts, shirts, music + more!</h3><a class="button" href="https://rendcollective.com/collections/rend-co-kids">Shop All</a>'
+  storeTarg.append(andEl);
+  console.log(andEl);
+}
+if (storeTarg) {
+  loadJSon(storeUrl)
+}

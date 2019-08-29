@@ -72,7 +72,7 @@ a.underline {
 	&.purple {
 		background-color: $color__purple
 	}
-	&.tiny {
+	&.tiny, &.small {
 		padding: 5px 10px;
 		font-size: 13px;
 		@media (min-width: 900px) {
