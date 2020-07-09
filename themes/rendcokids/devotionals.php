@@ -15,12 +15,7 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area devotionals-content">
-     <div class="clouds">
-    <img src="<?php echo get_stylesheet_directory_uri();?>/images/cloud1.svg">
-    <img src="<?php echo get_stylesheet_directory_uri();?>/images/cloud2.svg">
-    <img src="<?php echo get_stylesheet_directory_uri();?>/images/cloud3.svg">
-  </div>
+	<div id="primary" class="content-area">
   <?php
     $header = get_field('header');
   ?>

@@ -20,7 +20,8 @@
   max-width: 1250px;
   margin: 0 auto 30px;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  padding: 0 24px;
   h4 {
     font-weight: 400;
   }
@@ -30,7 +31,7 @@
     padding: 0 25px;
     margin: 0 0 20px;
     @media (max-width: 800px) {
-    
+
     text-align: center;
   }
   }
@@ -38,14 +39,14 @@
     margin-top: -50px;
     width: 80%;
     display: block;
-    
+
   }
 }
 
 #mc_embed_signup {
   text-align: left;
   padding: 0;
-  
+
 }
 #mc_embed_signup_scroll {
   display: flex;
@@ -58,11 +59,11 @@
       height: 45px;
     }
     input.email {
-      padding: 10px 12px;  
+      padding: 10px 12px;
       height: 45px;
       border-radius: 0px;
       border: 0px;
-      border-bottom: 4px solid $color__purple;  
+      border-bottom: 4px solid $color__purple;
       background: transparent;
       color: white;
 
@@ -80,7 +81,7 @@
       font-size: 16px;
     }
     max-width: 250px;
-    min-width: 120px;   
+    min-width: 120px;
     & + .input-group {
       max-width: 120px;
       input {
@@ -92,11 +93,15 @@
 }
 
 .footer-right {
+
   text-align: left;
-  
+
+  &:only-child {
+    text-align: center;
+  }
   a {
    text-decoration: none;
-   font-weight: 700; 
+   font-weight: 700;
   }
   a.social-icon {
     padding: 2px;

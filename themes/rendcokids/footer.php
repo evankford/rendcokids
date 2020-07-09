@@ -18,19 +18,6 @@
 
 					<!--End mc_embed_signup-->
 
-			<?php if (get_theme_mod('rendcokids_footer_menu') != false) {?>
-				<nav class="footer-menu">
-					<?php
-							//Get main menu (Desktop)
-							wp_nav_menu(array(
-								'theme_location' => 'menu-1'
-							));
-						?>
-
-				</nav>
-			<?php }?>
-
-		</div>
 		<div class="footer-right">
 			<?php if (get_theme_mod('footer_link_text') != '' && get_theme_mod('footer_link_url') != '') {
 				echo '<a href="' . get_theme_mod('footer_link_url') . '" target="_blank" rel="nofollow" class="footer-link"><h3>' . get_theme_mod('footer_link_text') . '</h3></a>';
