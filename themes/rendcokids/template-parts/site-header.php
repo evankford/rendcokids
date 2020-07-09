@@ -8,6 +8,6 @@
           }?>
   </div>
   <div class="header-menu">
-    <?php wp_nav_menu(['items_wrap' => '', 'container' => '', 'theme_location' => 'Primary']);?>
+    <?php wp_nav_menu([ 'theme_location' => 'menu_1']);?>
   </div>
 </header>

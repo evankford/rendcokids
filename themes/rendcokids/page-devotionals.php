@@ -47,7 +47,7 @@ get_header();
 
       if ($devotional['image'] != null){
         echo "div class=\"devotional-item__bg\">
-            <img src=\"{$devotional['img']['src']}\">
+            <img src=\"{$devotional['img']}\">
           </div>";
             }
             ?>

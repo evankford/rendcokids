@@ -5,7 +5,7 @@
  background-size: 500px auto;
  background-position: 100% 100%;
  background-repeat: no-repeat;
-  
+
 }
 
 .store-inner.section-inner {
@@ -16,7 +16,7 @@
 }
 
 .store-header {
-  flex: 1 1 240px;
+  flex: 1 1 200px;
   padding-left: 22px;
   margin: 30px auto;
   max-width: 400px;
@@ -24,8 +24,8 @@
 
 .store-grid {
   display: flex;
-  
-  flex: 1 1 400px;
+
+  flex: 3 1 400px;
   max-width: 1000px;
   margin: 40px auto;
   .store-grid-item {
@@ -58,7 +58,7 @@
         box-sizing: border-box;
         // max-width: 100%;
         grid-template-columns: repeat(3, minmax(0, 1fr));
-       
+
         @media (max-width: 960px) {
           grid-template-columns: repeat(2, minmax(0, 1fr))
         }
@@ -70,7 +70,7 @@
           }
         }
         @media (max-width: 320px) {
-         
+
         }
       }
 }

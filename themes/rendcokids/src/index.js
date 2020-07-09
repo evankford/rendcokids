@@ -36,33 +36,31 @@ musicButton.addEventListener('click', function(event) {
     window.scrollTo({
       'behavior': 'smooth',
       'left': 0,
-      'top': offset(musicButton).top - 100  
+      'top': offset(musicButton).top - 100
     });
-    function clickOff(event) { 
+    function clickOff(event) {
       // console.log(event.target.parentNode);
       if (event.target.parentNode != musicButton) {
         musicButton.classList.remove('active')
       }
     }
     window.addEventListener('click', clickOff(event));
-  
-    
+
+
   }, 400);
 });
 
-window.onload=function() {
+window.addEventListener('load', function() {
 
 
   var tobi = new Tobi({
     autoplayVideo: true
-  }); 
-  
-
-    
-}
+  });
 
 
-``
+
+})
+
 ///store
 
 let storeUrl = 'https://rendcollective.com/collections/rend-co-kids/products.json';
@@ -95,10 +93,21 @@ function onDataLoad(data) {
     i++
     let el = document.createElement('a');
     el.classList.add('store-grid-item');
-     el.setAttribute('href', 'https://rendcollective.com/products/' + product.handle) 
+     el.setAttribute('href', 'https://rendcollective.com/products/' + product.handle)
+
+
+     var img = product.images[0].src;
+     var imgIndex = img.indexOf('.png');
+     if (imgIndex < 0) {
+       imgIndex = img.indexOf('.jpg');
+     }
+
+     var imgSrc = img.slice(0, imgIndex) + '_600x' + img.slice(imgIndex, img.length);
+
+
      el.innerHTML = `<div class="store-item">
         <div class="store-image">
-          <img class="lazyload" src="` + product.images[0].src  + `">
+          <img class="lazyload" src="` + imgSrc  + `">
         </div>
         <div class="store-bottom">
           <div class="store-info"><h4>`+ product.title + `</h4><span class="price">` + product.variants[0].price + `</span></div>
@@ -109,7 +118,7 @@ function onDataLoad(data) {
         storeTarg.append(el);
      }
   })
-  
+
   let andEl = document.createElement('div');
   andEl.classList.add('store-extra', 'store-grid-item');
   // andEl.classList.add('store-grid-item');
