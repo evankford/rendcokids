@@ -18,6 +18,7 @@ body.devotionals {
       margin: 0;
       @media (max-width: 600px) {
         font-size: 60px;
+        word-break: break-word;
       }
     }
   }
