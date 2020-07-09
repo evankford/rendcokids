@@ -16,6 +16,9 @@ body.devotionals {
     text-align: center;
     h1 {
       margin: 0;
+      @media (max-width: 600px) {
+        font-size: 60px;
+      }
     }
   }
 }
