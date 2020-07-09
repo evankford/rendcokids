@@ -1,6 +1,7 @@
 <?php
 /**
  * @package The_SEO_Framework\Views\Admin
+ * @subpackage The_SEO_Framework\Admin\Settings
  */
 
 defined( 'THE_SEO_FRAMEWORK_PRESENT' ) and $_this = the_seo_framework_class() and $this instanceof $_this or die;
@@ -24,8 +25,7 @@ defined( 'THE_SEO_FRAMEWORK_PRESENT' ) and $_this = the_seo_framework_class() an
 		\do_action( 'the_seo_framework_before_siteadmin_metaboxes_side', $this->seo_settings_page_hook );
 
 		/**
-		 * @TODO fill this in
-		 * @priority low 2.9.0
+		 * @TODO fill this in...?
 		 */
 
 		\do_action( 'the_seo_framework_after_siteadmin_metaboxes_side', $this->seo_settings_page_hook );

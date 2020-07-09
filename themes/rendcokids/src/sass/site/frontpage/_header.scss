@@ -3,7 +3,7 @@ header.header  {
   top: 0; left: 0;
   width: 25%;
   display: flex;
-  
+
   flex-wrap: wrap;
   max-width: 350px;
   padding: 30px;
@@ -28,9 +28,19 @@ header.header  {
     flex: 1 1 160px;
     text-align: center;
     max-width: 200px;
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    li {
+      list-style: none;
+      display: inline-block;
+    }
     a {
       display: inline-block;
-      
+      color: white;
+      @extend .underline;
     }
   }
    @media (max-width: 950px) {
@@ -38,7 +48,7 @@ header.header  {
     max-width: 100%;
     .header-logo-outer {
       position: absolute;
-      width: 150px; 
+      width: 150px;
       left: 50%;
       margin-left: -75px;
       top: 0;
@@ -46,14 +56,14 @@ header.header  {
     .header-menu {
       width: 100%;
       max-width: 100%;
-      padding: 40px 0;  
+      padding: 40px 0;
       a {
         margin-right: 90px;
         &+a {
           margin-right: 0px;
           margin-left: 90px;
         }
-      } 
+      }
     }
-  } 
+  }
 }
