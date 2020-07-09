@@ -30,25 +30,27 @@ function offset(el) {
 }
 
 let musicButton = document.querySelector('.music-button');
-musicButton.addEventListener('click', function(event) {
-  this.classList.toggle('active');
-  setTimeout(() => {
-    window.scrollTo({
-      'behavior': 'smooth',
-      'left': 0,
-      'top': offset(musicButton).top - 100
-    });
-    function clickOff(event) {
-      // console.log(event.target.parentNode);
-      if (event.target.parentNode != musicButton) {
-        musicButton.classList.remove('active')
+if (musicButton) {
+  musicButton.addEventListener('click', function(event) {
+    this.classList.toggle('active');
+    setTimeout(() => {
+      window.scrollTo({
+        'behavior': 'smooth',
+        'left': 0,
+        'top': offset(musicButton).top - 100
+      });
+      function clickOff(event) {
+        // console.log(event.target.parentNode);
+        if (event.target.parentNode != musicButton) {
+          musicButton.classList.remove('active')
+        }
       }
-    }
-    window.addEventListener('click', clickOff(event));
+      window.addEventListener('click', clickOff(event));
 
 
-  }, 400);
-});
+    }, 400);
+  });
+}
 
 window.addEventListener('load', function() {
 

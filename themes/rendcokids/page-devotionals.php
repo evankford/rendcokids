@@ -47,8 +47,8 @@ get_header();
       <a target="_blank" href="<?php echo $devotional['file']?>" class="devotional-item" >
       <?php
 
-      if ($devotional['image'] != null){
-        echo "div class=\"devotional-item__bg\">
+      if ($devotional['img'] != null){
+        echo "<div class=\"devotional-item__bg\">
             <img src=\"{$devotional['img']}\">
           </div>";
             }
